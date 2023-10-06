@@ -1,0 +1,29 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="Notes.MainWindow"
+        Title="Notes">
+
+	<Grid RowDefinitions="Auto, *">
+
+		<Grid Grid.Row="0" Height="50">
+			<Label FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Center">NoteBook</Label>
+		</Grid>
+
+		<Grid Grid.Row="1" ColumnDefinitions="Auto, *" Background="AliceBlue">
+			<StackPanel Grid.Column="0">
+				<Button Width="150" Margin="10" x:Name="AddNote">Добавить заметку</Button>
+				<Button Width="150" Margin="10" x:Name="DeleteNote" IsEnabled="False">Удалить заметку</Button>
+				<Button Width="150" Margin="10" x:Name="EditNote" IsEnabled="False">Редактировать</Button>
+			</StackPanel>
+
+			<ScrollViewer Grid.Column="1">
+				<ListBox x:Name="AllNotes" Background="White" Margin="10"/>
+			</ScrollViewer>
+		</Grid>
+		
+	</Grid>
+	
+</Window>
